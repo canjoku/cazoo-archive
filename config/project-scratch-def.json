@@ -1,8 +1,6 @@
+
 {
-  "orgName": "cazooarchive",
+  "orgName": "tony company",
   "edition": "Developer",
-  "features": [
-    "API",
-    "AuthorApex"
-  ]
+  "features": []
 }
