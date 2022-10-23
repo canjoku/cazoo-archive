@@ -17,4 +17,24 @@ public with sharing class ArchivedMessagesController {
         }
         return responseObject;
     }
+
+    @AuraEnabled
+    public static Boolean restoreMessage(final String externalId, String fromAddress, String subject, String textBody){
+        Boolean result = false;
+        try {
+            RestoredMessage__c newMessage = new RestoredMessage__c();
+            newMessage.externalId__c = externalId;
+            newMessage.fromAddress__c = fromAddress;
+            newMessage.subject__c = subject;
+            newMessage.textBody__c = textBody;
+            insert newMessage; 
+
+            result = true;
+            
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+
+        return result;
+    }
 }

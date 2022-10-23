@@ -4,6 +4,10 @@ private class TestFactory {
     public static final String apiBase = 'callout:CazooArchive';
     public static final Integer statusCode = 200;
     public static final String status = 'OK';
+    public static final String externalId = 'unq-4563546';
+    public static final String fromAddress = 'catwoman@welcome.com';
+    public static final String subject = 'Welcome email';
+    public static final String textBody = 'Wellcome to cazoo';
 
     public static String createRequestBody() {
         String requestBody = JSON.serialize(new Map<String, String> {'ParentId' => '200xxxxx'});
