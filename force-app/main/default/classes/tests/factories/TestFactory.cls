@@ -12,29 +12,36 @@ private class TestFactory {
     public static String createTestResponse() {
         List<Map<String, String>> listOfEmailResponses = new List<Map<String, String>> {
             new Map<String, String> {
-                'externalId' => 'unq-0004567',
+                'externalId' => 'unq-0001234',
                 'fromAddress' => 'lions@zoo.com',
                 'subject' => 'feed the lions time change',
                 'textBody' => 'can we condiser a change to the lions feeding time window'
             },
             new Map<String, String> {
-                'externalId' => 'unq-0004567',
-                'fromAddress' => 'lions@zoo.com',
-                'subject' => 'feed the lions time change',
-                'textBody' => 'can we condiser a change to the lions feeding time window'
+                'externalId' => 'unq-0009876',
+                'fromAddress' => 'cats@zoo.com',
+                'subject' => 'feed the cats time change',
+                'textBody' => 'Cats are lovely'
             },
             new Map<String, String> {
-                'externalId' => 'unq-0004567',
-                'eromAddress' => 'lions@zoo.com',
-                'subject' => 'feed the lions time change',
-                'textBody' => 'can we condiser a change to the lions feeding time window'
+                'externalId' => 'unq-0007657',
+                'eromAddress' => 'monkeys@zoo.com',
+                'subject' => 'feed the monkeys time change',
+                'textBody' => 'Be careful with monkeys. they may bite'
             },
             new Map<String, String> {
-                'externalId' => 'unq-0004567',
-                'fromAddress' => 'lions@zoo.com',
-                'subject' => 'feed the lions time change',
-                'textBody' => 'can we condiser a change to the lions feeding time window'
+                'externalId' => 'unq-0000909',
+                'fromAddress' => 'tigers@zoo.com',
+                'subject' => 'feed the tigers time change',
+                'textBody' => 'tigers like to play'
+            },
+            new Map<String, String> {
+                'externalId' => 'unq-0054549',
+                'fromAddress' => 'mongoose@zoo.com',
+                'subject' => 'feed the mongoose time change',
+                'textBody' => 'mongoose hate snakes'
             }
+
         };
         String responseData  = JSON.serialize(listOfEmailResponses);     
     

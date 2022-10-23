@@ -33,5 +33,7 @@ private class HttpCalloutUtility_Test {
         System.assertNotEquals(null, response);
         System.assertEquals(true, response.isSuccessful);
         System.assertNotEquals(null, response.httpResponseHeaders);
+
+        system.debug('response from utility ' + response);
     }
 }
