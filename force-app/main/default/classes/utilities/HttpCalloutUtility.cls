@@ -9,7 +9,7 @@ public with sharing class HttpCalloutUtility {
         public Boolean gzipRequest {get; set;}
 
         public HttpCalloutSettings() {
-            this.timeOutInSeconds = 30;
+            this.timeOutInSeconds = 300;
             this.gzipRequest = false;
         }
     }

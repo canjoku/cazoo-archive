@@ -1,6 +1,6 @@
 public with sharing class ArchivedMessagesController {
 
-    @AuraEnabled(cacheable=true)
+    @AuraEnabled
     public static List<ResponseDTO> getMessages(String parentId){
         List<ResponseDTO> responseObject = new List<ResponseDTO>();
         HttpCalloutUtility.HttpCalloutSettings calloutSettings = new HttpCalloutUtility.HttpCalloutSettings();
@@ -19,7 +19,7 @@ public with sharing class ArchivedMessagesController {
     }
 
     @AuraEnabled
-    public static Boolean restoreMessage(final String externalId, String fromAddress, String subject, String textBody){
+    public static Boolean restoreMessage(String externalId, String fromAddress, String subject, String textBody){
         Boolean result = false;
         try {
             RestoredMessage__c newMessage = new RestoredMessage__c();

@@ -1,16 +1,15 @@
-import { LightningElement, api, wire } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import createMessage from '@salesforce/apex/ArchivedMessagesController.restoreMessage';
-import Title from '@salesforce/schema/Contact.Title';
 
 export default class ArchivedMessagesCard extends LightningElement {
 @api record
-@api errors;
+@api error;
 buttonTitle = 'Restore Message'
     async restoreMessage() {
         try {
             await createMessage({externalId: this.record.externalId, fromAddress: this.record.fromAddress, subject: this.record.subject, textBody: this.record.textBody});
         } catch (error) {
-            this.errors = error;
+            this.error = error;
         }
         
     }

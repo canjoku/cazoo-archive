@@ -1,10 +1,16 @@
 public class ResponseDTO {
 
-	public String externalId;
-	public String fromAddress;
-	public String subject;
-	public String textBody;
+	@AuraEnabled
+	public String externalId {get; set;}
 
+	@AuraEnabled
+	public String fromAddress {get; set;}
+
+	@AuraEnabled
+	public String subject {get; set;}
+
+	@AuraEnabled
+	public String textBody {get; set;}
 	
 	public static List<ResponseDTO> parse(String json) {
 		String replaceSubstring = json.replace('External_Id__c', 'externalId');
