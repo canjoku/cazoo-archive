@@ -8,9 +8,8 @@ HttpCalloutUtility.HttpCalloutResponse response = new HttpCalloutUtility(callout
 
 List<ResponseDTO> responseObject = ResponseDTO.parse(response.httpResponseBodyAsString);
 
-System.debug(responseObject[0]);
-System.debug(responseObject[1]);
-System.debug(responseObject[2]);
-System.debug(responseObject[3]);
-
-
+System.debug('response Object  ' + responseObject[0]);
+System.debug('response Object  ' + responseObject[1]);
+System.debug('response Object  ' + responseObject[2]);
+System.debug('response Object  ' + responseObject[3]);
+System.debug('response Object  ' + responseObject[4]);

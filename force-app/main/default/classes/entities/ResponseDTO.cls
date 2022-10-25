@@ -7,6 +7,7 @@ public class ResponseDTO {
 
 	
 	public static List<ResponseDTO> parse(String json) {
-		return (List<ResponseDTO>) System.JSON.deserialize(json, List<ResponseDTO>.class);
+		String replaceSubstring = json.replace('External_Id__c', 'externalId');
+		return (List<ResponseDTO>) System.JSON.deserialize(replaceSubstring, List<ResponseDTO>.class);
 	}
 }

@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Archived Messages List" icon-name="custom:custom63">
+        <template if:true={records}>
+            <template for:each={records} for:item="record">
+                <c-archived-messages-card record={record} key={record.externalId}></c-archived-messages-card>
+            </template>
+        </template>
+    </lightning-card>
+</template>

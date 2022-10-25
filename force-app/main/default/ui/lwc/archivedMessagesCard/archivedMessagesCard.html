@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item>
+                <div>
+                    {record.fromAddress}<br />
+                    {record.subject}<br />
+                    {record.textBody}<br />
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <div>
+                    <lightning-button
+                    label={buttonTitle}
+                    onclick={buttonTitle}
+                    ></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

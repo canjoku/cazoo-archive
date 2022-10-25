@@ -1,6 +1,6 @@
 public with sharing class ArchivedMessagesController {
 
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static List<ResponseDTO> getMessages(String parentId){
         List<ResponseDTO> responseObject = new List<ResponseDTO>();
         HttpCalloutUtility.HttpCalloutSettings calloutSettings = new HttpCalloutUtility.HttpCalloutSettings();
