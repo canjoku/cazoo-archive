@@ -12,7 +12,7 @@ private class HttpCalloutUtility_Test {
         System.assertEquals('POST', calloutSettings.verb, 'Method is set');
         System.assertEquals('callout:CazooArchive', calloutSettings.endpointOrNamedCredential, 'end point is set');
         System.assertEquals('200xxxxx', requestBodyObject.parentId, 'parent Id is set');
-        System.assertEquals(30, calloutSettings.timeOutInSeconds, 'time out is set');
+        System.assertEquals(300, calloutSettings.timeOutInSeconds, 'time out is set');
         System.assertEquals(false, calloutSettings.gzipRequest, 'gzip request is set');
     }
 

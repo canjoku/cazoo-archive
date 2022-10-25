@@ -15,7 +15,7 @@ private class ArchivedMessagesController_Test {
         System.assertEquals(5, response.size());
 
     }
-
+    @IsTest
     static void restoreMessage_isSuccessful() {
         Test.startTest();
         Boolean result = ArchivedMessagesController.restoreMessage(TestFactory.externalId, TestFactory.fromAddress, TestFactory.subject, TestFactory.textBody);
